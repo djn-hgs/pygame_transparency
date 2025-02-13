@@ -20,18 +20,17 @@ while looping:
 
     new_time = pygame.time.get_ticks() - start
 
-    #surface = pygame.Surface(screen.get_size()).convert_alpha()
+    surface = pygame.Surface(screen.get_size()).convert_alpha()
 
-    surface = screen.copy().convert_alpha()
+    # This one can be useful as well
+    #surface = screen.copy().convert_alpha()
+
+    # Fill with a nearly totally transparent black overlay
 
     surface.fill((0, 0, 0, 1))
 
-    #screen.fill((0, 0, 0, 1))
-
-    # pygame.draw.rect(surface,
-    #                  (0, 0, 0, 100),
-    #                  pygame.Rect(0, 0, surface.get_width(), surface.get_height())
-    #                  )
+    # Just some silly equations to make an animated blob
+    # Using hsv is pretty
 
     r = 200 + 20 * math.cos(new_time / 400)
 

@@ -5,7 +5,6 @@ import pygame
 pygame.init()
 
 screen = pygame.display.set_mode((800, 600))
-screen.convert_alpha()
 
 start = pygame.time.get_ticks()
 
